@@ -1,0 +1,101 @@
+$block: '.card';
+
+#{$block} {
+
+  &__icon {
+    @extend .flexbox;
+    @extend .justify-center;
+    margin-bottom: 25px;
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 11px;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 2.3px;
+    text-align: center;
+    color: var(--black);
+  }
+
+  &__description {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #9b9b9b;
+  }
+
+  &#{$block} {
+    &_icon-left {
+      @extend .direction-row;
+      @extend .align-start;
+      background-color: #f7f7f7;
+
+      #{$block} {
+
+        &__icon {
+          width: 60px;
+          margin: 0 38px 0 0;
+          & img{
+            width: 60px;
+            height: 60px;
+          }
+
+          @include media-breakpoint-down(md) {
+            margin: 0 20px 0 0;
+          }
+        }
+
+        &__title {
+          font-size: 14px;
+          line-height: 1.71;
+          letter-spacing: 2px;
+          text-align: left;
+        }
+
+        &__description {
+          text-align: left;
+        }
+      }
+    }
+
+    &_team {
+
+      #{$block} {
+
+        &__icon {
+          margin-bottom: 20px;
+        }
+
+        &__title {
+          text-align: left;
+          margin-bottom: 3px;
+
+          @include media-breakpoint-down(xs) {
+            text-align: center;
+          }
+        }
+
+        &__description {
+          text-align: left;
+          color: var(--green);
+
+          @include media-breakpoint-down(xs) {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+}

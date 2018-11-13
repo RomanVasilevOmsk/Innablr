@@ -1,0 +1,132 @@
+$block: '.contacts';
+
+#{$block} {
+  position: relative;
+  padding: 133px 0 112px;
+  background-color: var(--grey-light);
+
+  @media screen and (max-width: 1100px) {
+    padding-top: 60px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 60px;
+  }
+
+  &__frame {
+    @include sprite($corner-right-purple-image);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media screen and (max-width: 1100px) {
+      display: none;
+    }
+
+    @media only screen and (-Webkit-min-device-pixel-ratio: 2){
+      background-size: 100%;
+      background-position: inherit;
+      background-image: url('../images/corner-right-purple-image@2x.png');
+    }
+    @media only screen and (-Webkit-min-device-pixel-ratio: 3){
+      background-image: url('../images/corner-right-purple-image@3x.png');
+    }
+  }
+
+  &:after {
+    content: '';
+    @include sprite($corner-left-green2-image);
+    position: absolute;
+    right: 0;
+    bottom: -60px;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+
+    @media only screen and (-Webkit-min-device-pixel-ratio: 2){
+      background-size: 203px 265px;
+      background-position: inherit;
+      background-image: url('../images/corner-left-green2-image@2x.png');
+    }
+    @media only screen and (-Webkit-min-device-pixel-ratio: 3){
+      background-image: url('../images/corner-left-green2-image@3x.png');
+    }
+  }
+
+  &__content {
+    display: flex;
+
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    & > * {
+      flex: 1;
+    }
+
+    &:before {
+      content: '';
+      flex: 1;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    .form {
+      flex: 0 0 460px;
+      margin: 0 65px;
+
+      @include media-breakpoint-down(sm) {
+        flex: 0 0 100%;
+        order: 1;
+        margin: 0;
+      }
+    }
+  }
+
+  &-panel {
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      flex: 0 0 100%;
+      margin-bottom: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 640px) {
+      flex-wrap: wrap;
+      max-width: 456px;
+      margin: 0 auto 20px auto;
+      justify-content: flex-start;
+    }
+
+    .subtitle_primary {
+      @include media-breakpoint-down(sm) {
+        margin: 0 20px 0 0;
+
+        @media screen and (max-width: 640px) {
+          min-width: 120px;
+          flex: 0 0 120px;
+          margin: 0 20px 15px 0;
+        }
+
+        @media screen and (max-width: 440px) {
+          flex: 0 0 100%;
+          margin: 0;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  &__note {
+    max-width: 610px;
+    margin: 0 auto;
+  }
+
+}

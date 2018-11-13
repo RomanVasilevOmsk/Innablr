@@ -1,0 +1,22 @@
+$block: '.icon';
+
+#{$block} {
+  width: 9px;
+  height: 14px;
+
+  svg {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &#{$block} {
+
+    &_right {
+      margin-left: 15px;
+    }
+
+    &_left {
+      margin-right: 15px;
+    }
+  }
+}

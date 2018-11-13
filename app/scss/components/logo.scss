@@ -1,0 +1,9 @@
+$block: '.logo';
+
+#{$block} {
+  display: block;
+
+  img {
+    max-width: 100%;
+  }
+}

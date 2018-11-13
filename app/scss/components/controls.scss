@@ -1,0 +1,145 @@
+$block: '.btn';
+
+#{$block} {
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus{
+    outline:none;
+    box-shadow: none;
+  }
+  &#{$block} {
+
+    &_primary {
+      padding: 15px 27px 15px 38px;
+      font-size: 18px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.56;
+      letter-spacing: normal;
+      color: var(--white);
+      border-radius: 4px;
+      background-color: var(--purple);
+      box-shadow: $shadow_primary;
+      transition-property: all;
+      transition-duration: 0.45s;
+      transition-timing-function: $timing_function_btn_hover;
+      transition-delay: 0s;
+
+      &:hover {
+        box-shadow: $shadow_button_hover;
+        transform: translateY(-3px);
+        transition-property: all;
+        transition-duration: 0.45s;
+        transition-timing-function: $timing_function_btn_hover;
+        transition-delay: 0s;
+      }
+
+      .icon.icon_right {
+        margin-left: 35px;
+      }
+
+      &.no-top-rounded {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+
+    &_secondary {
+      padding: 10px 22px;
+      font-size: 16px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: var(--green);
+      background-color: var(--white);
+      border-radius: 4px;
+      border: solid 2px var(--green);
+      transition-property: all;
+      transition-duration: 0.45s;
+      transition-timing-function: $timing_function_btn_hover;
+      transition-delay: 0s;
+
+      &:hover {
+        box-shadow: $shadow_primary;
+        transform: translateY(-1px);
+        transition-property: all;
+        transition-duration: 0.45s;
+        transition-timing-function: $timing_function_btn_hover;
+        transition-delay: 0s;
+        background-color: var(--green);
+        color: var(--white);
+      }
+    }
+
+    &_with-icon {
+      display: flex;
+    }
+
+    &_action {
+      @extend .flexbox;
+      padding: 0;
+      background: var(--white);
+      color: var(--purple);
+      border: 2px solid var(--purple);
+      font-size: 16px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.13;
+      letter-spacing: normal;
+      transition-property: all;
+      transition-duration: 0.45s;
+      transition-timing-function: $timing_function_btn_hover;
+      transition-delay: 0s;
+
+      &:hover {
+        box-shadow: $shadow_primary;
+        transform: translateY(-1px);
+        transition-property: all;
+        transition-duration: 0.45s;
+        transition-timing-function: $timing_function_btn_hover;
+        transition-delay: 0s;
+      }
+
+      #{$block} {
+        &__text {
+          padding: 10px 20px;
+          border-right: 1px solid var(--purple);
+        }
+      }
+
+      .icon {
+        @extend .flexbox;
+        @extend .align-center;
+        margin: 0 20px 0 15px;
+        align-self: stretch;
+        height: auto;
+
+        svg {
+          width: 10px;
+          height: 15px;
+        }
+      }
+    }
+    &-menu-toggle {
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+
+      &.active {
+        position: absolute;
+        z-index: 11;
+        top: 20px;
+        right: 20px;
+
+        @media screen and (max-width: 500px){
+          top: -20px;
+        }
+      }
+    }
+  }
+}

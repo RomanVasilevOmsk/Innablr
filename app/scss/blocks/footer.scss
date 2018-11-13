@@ -1,0 +1,17 @@
+$block: '.footer';
+
+#{$block} {
+  padding: 18px 0;
+  background-color: var(--text-primary);
+
+  &__inner {
+    @extend .flexbox;
+    @extend .align-center;
+    @extend .justify-center;
+
+
+    @media screen and (max-width: 500px) {
+      flex-wrap: wrap;
+    }
+  }
+}

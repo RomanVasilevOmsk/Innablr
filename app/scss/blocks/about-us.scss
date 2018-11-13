@@ -1,0 +1,53 @@
+$block: '.about-us';
+
+#{$block} {
+  position: relative;
+  padding: 100px 0 67px;
+  overflow: hidden;
+
+  @include media-breakpoint-down(xs) {
+    padding: 50px 30px;
+  }
+
+  @media screen and (max-width: 440px) {
+    padding: 40px 0;
+  }
+
+  &__frame {
+    @include sprite($corner-purple-right-image);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-down(md) {
+      width: 250px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 170px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+
+    @media only screen and (-Webkit-min-device-pixel-ratio: 2){
+      background-position: inherit;
+      background-size: 100%;
+      background-image: url('../images/corner-purple-right-image@2x.png');
+    }
+    @media only screen and (-Webkit-min-device-pixel-ratio: 3){
+       background-image: url('../images/corner-purple-right-image@3x.png');
+    }
+  }
+
+  &__header {
+    margin-bottom: 15px;
+  }
+
+  &__note {
+    max-width: 430px;
+    margin: 0 auto;
+  }
+}

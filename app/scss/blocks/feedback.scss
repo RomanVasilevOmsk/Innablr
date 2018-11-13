@@ -1,0 +1,49 @@
+$block: '.feedback';
+
+#{$block} {
+  padding: 0 170px;
+  text-align: left;
+
+  @include media-breakpoint-down(lg) {
+    padding: 0 70px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 0 20px;
+  }
+
+  &__inner {
+    @extend .flexbox;
+    @extend .justify-between;
+    @extend .align-center;
+    padding-top: 55px;
+    border-top: solid 2px var(--grey-light-second);
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 30px;
+    }
+
+    @include media-breakpoint-down(xs) {
+     flex-wrap: wrap;
+    }
+  }
+
+  &__group {
+    @include media-breakpoint-down(xs) {
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+     }
+  }
+
+  .title_primary {
+    text-align: left;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 26px;
+    }
+  }
+
+  .text {
+    text-align: left;
+  }
+}
