@@ -9,10 +9,6 @@ $block: '.hero';
     background-image: url('../images/hero-background-img@3x.png');
   }
 
-  @include media-breakpoint-down(xs) {
-    padding-top: 40px;
-  }
-
   &__top {
     @extend .flexbox;
     @extend .justify-center;

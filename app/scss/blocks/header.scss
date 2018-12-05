@@ -4,9 +4,12 @@ $block: '.header';
   position: relative;
   padding: 30px 0 28px;
   box-shadow: $shadow_secondary;
-  // width: 100%;
-  // background-color: #fff;
-  // z-index: 9;
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+  }
 
   &__group {
     @extend .flexbox;

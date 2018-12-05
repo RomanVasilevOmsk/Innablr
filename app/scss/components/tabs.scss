@@ -19,9 +19,7 @@ $block: '.tab-nav';
   }
 }
 
-@include media-breakpoint-down(xs) {
-  flex-direction: column;
-}
+
 
 #{$block} {
   margin-bottom: 65px;

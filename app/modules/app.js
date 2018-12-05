@@ -42,9 +42,9 @@ const common = () => {
   // on scroll animation
 
   AOS.init({
-     once: true,
-     // delay: 100,
-    offset: 120,
+    once: true,
+    delay: 100,
+    offset: 90,
     anchorPlacement: 'center'
   });
 
